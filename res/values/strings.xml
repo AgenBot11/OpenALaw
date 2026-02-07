@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OpenALaw</string>
+    <string name="accessibility_service_description">
+        OpenALaw: Autonomous AI Agent for Android
+        Provides intelligent automation and assistance on your device.
+        This service helps the AI understand and interact with your screen content.
+    </string>
+</resources>

@@ -1,0 +1,64 @@
+{
+  "project": "OpenALaw",
+  "version": "1.0.0",
+  "architecture": "ARM64",
+  "platform": "Android",
+  "build": {
+    "source_dirs": [
+      "."
+    ],
+    "include_dirs": [
+      ".",
+      "./deps/include"
+    ],
+    "libs": [
+      "log",
+      "android",
+      "jnigraphics"
+    ],
+    "defines": [
+      "ARM_ARCH",
+      "ANDROID_NDK",
+      "ARM_OPTIMIZED"
+    ],
+    "c_flags": [
+      "-std=c++11",
+      "-Wall",
+      "-Wextra",
+      "-O2",
+      "-DANDROID_NDK",
+      "-DARM_ARCH"
+    ],
+    "cpp_flags": [
+      "-std=c++11",
+      "-fexceptions",
+      "-frtti",
+      "-DANDROID_BRIDGE",
+      "-DARM_OPTIMIZED"
+    ],
+    "linker_flags": [
+      "-landroid",
+      "-llog",
+      "-ljnigraphics"
+    ]
+  },
+  "android": {
+    "min_sdk_version": 21,
+    "target_sdk_version": 30,
+    "abis": [
+      "arm64-v8a",
+      "armeabi-v7a"
+    ]
+  },
+  "optimizations": {
+    "arm_neon": true,
+    "arm_mode": "arm",
+    "simd_enabled": true,
+    "power_efficient": true
+  },
+  "deployment": {
+    "output_dir": "./dist",
+    "artifact_name": "openalaw-arm64",
+    "compression": "zip"
+  }
+}
